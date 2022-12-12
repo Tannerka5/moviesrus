@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Display{% endblock %}
+{% block content %}
+{% load static %}
+
+{% for movie in db_movies %}
+    <div style="border: 1px solid red;">
+        <p>
+        {{movie.title|upper}}-
+        {{movie.year|upper}}-
+        {{movie.category.description|upper}}-
+        {{movie.rating.description|upper}}
+        <br>
+        </p>
+    </div>
+    {% endfor %}
+
+{% endblock %}

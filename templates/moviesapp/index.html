@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+{% load static %}
+
+<h2>Welcome to my plex library</h2>
+<a href="{% url 'info' movie_title="galaxy quest" movie_year="1999"%}" class="btn btn-primary">Show Info</a>
+<a href="{% url 'movie' movie_title="galaxy quest" %}"  class="btn btn-primary">Show Movie</a>
+<a href="display/" class="btn btn-primary">Display Movies</a>
+
+{% endblock %}
